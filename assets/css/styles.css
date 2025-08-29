@@ -204,3 +204,25 @@ input:focus, textarea:focus { outline: 2px solid rgba(13,148,136,.35); outline-o
   .btn { height: 36px; padding: 0 14px; }
 }
 
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--text);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 0 0 8px 0;
+  z-index: 100;
+}
+.skip-link:focus { top: 0; outline: 2px solid var(--yellow); }
+
+/* Active nav link */
+.nav-links a[aria-current="page"] { color: var(--text); font-weight: 700; }
+
+/* Focus states */
+.btn:focus-visible, .pill:focus-visible, .nav-links a:focus-visible {
+  outline: 2px solid rgba(13,148,136,.45);
+  outline-offset: 2px;
+}
+
