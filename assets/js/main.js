@@ -1,5 +1,14 @@
 // Lumy TV - global JS: nav, GA, lazy images, calculator
 (function () {
+  // Theme: respect system and persist user choice
+  (function initTheme() {
+    try {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+    } catch (_) {}
+  })();
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
@@ -79,6 +88,24 @@
     annual = pressed ? pressed.dataset.billing === 'annual' : false;
     updateAll();
   }
-  document.addEventListener('DOMContentLoaded', initPricing);
+  document.addEventListener('DOMContentLoaded', function () {
+    initPricing();
+
+    // Theme toggle handler
+    const toggle = document.querySelector('[data-theme-toggle]');
+    if (toggle) {
+      function updateLabel() {
+        const isDark = document.documentElement.classList.contains('dark');
+        toggle.setAttribute('aria-pressed', String(isDark));
+        toggle.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+      }
+      toggle.addEventListener('click', function () {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (_) {}
+        updateLabel();
+      });
+      updateLabel();
+    }
+  });
 })();
 
