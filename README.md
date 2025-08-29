@@ -1,128 +1,185 @@
-# Modern Web Solutions - Digital Agency Website
+# Lumy TV – Website Completo
 
-A modern, responsive website for a digital agency showcasing web development, mobile app development, and UI/UX design services.
+Um website moderno e responsivo para a Lumy TV, uma plataforma de ecrãs digitais inteligentes.
 
-## 🚀 Features
+## 🚀 Características
 
-### Design & UI/UX
-- **Modern Gradient Design**: Beautiful purple-blue gradient theme
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Smooth Animations**: CSS animations and transitions for enhanced user experience
-- **Interactive Elements**: Hover effects, ripple buttons, and smooth scrolling
-- **Typography**: Clean, modern Inter font family
-- **Icons**: Font Awesome icons throughout the interface
+- **Design Moderno**: Layout clean e responsivo com animações suaves
+- **Paleta de Cores**: Verde-menta (#A6E3D0), amarelo (#FDDC5C), branco (#FFFFFF), cinza claro (#F1FAEE)
+- **Tipografia**: Inter (Google Fonts)
+- **SEO Otimizado**: Meta tags, Open Graph, estrutura semântica
+- **Performance**: Lazy loading, imagens otimizadas, CSS/JS minificado
+- **Acessibilidade**: Navegação por teclado, alt text, contraste adequado
 
-### Functionality
-- **Animated Counters**: Statistics that animate when scrolled into view
-- **Form Validation**: Client-side email validation with user feedback
-- **Notification System**: Toast notifications for user interactions
-- **Smooth Navigation**: Smooth scrolling between sections
-- **Active Navigation**: Highlights current section in navigation
-- **Parallax Effects**: Subtle parallax scrolling in hero section
-
-### Performance & Accessibility
-- **Optimized Loading**: Efficient CSS and JavaScript loading
-- **Mobile-First**: Responsive design optimized for mobile devices
-- **SEO Optimized**: Proper meta tags and semantic HTML
-- **Cross-Browser Compatible**: Works on all modern browsers
-
-## 📁 File Structure
+## 📁 Estrutura do Projeto
 
 ```
-├── index.html          # Main HTML file
+/
+├── index.html              # Página inicial
+├── use-cases.html          # Casos de uso
+├── pricing.html            # Preços e planos
+├── partners.html           # Parceiros
 ├── css/
-│   ├── main.css        # Custom styles and animations
-│   └── bootstrap.min.css # Bootstrap framework
+│   └── style.css          # Estilos principais
 ├── js/
-│   ├── main.js         # Interactive functionality
-│   └── plugins.js      # Plugin configurations
-└── README.md           # This file
+│   └── main.js            # JavaScript interativo
+├── images/
+│   ├── lumy-logo.svg      # Logo principal
+│   ├── lumy-logo-white.svg # Logo branco (footer)
+│   └── [outras imagens]   # Imagens do site
+├── favicon.ico            # Favicon
+└── README.md              # Este arquivo
 ```
 
-## 🛠️ Technologies Used
+## 🎨 Páginas Implementadas
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with gradients, animations, and responsive design
-- **JavaScript**: Interactive functionality and animations
-- **Bootstrap 3**: Responsive grid system and components
-- **jQuery**: DOM manipulation and event handling
-- **Font Awesome**: Icon library
-- **Google Fonts**: Inter font family
+### 1. Home Page (`index.html`)
+- **Hero Section**: Título principal e descrição
+- **Features**: 6 funcionalidades principais com ícones
+- **CTA**: Call-to-action para demo
 
-## 🎨 Design Features
+### 2. Casos de Uso (`use-cases.html`)
+- **Grid de Casos**: 6 setores diferentes
+- **Benefícios**: Lista de vantagens por setor
+- **Links**: Para páginas individuais de cada caso de uso
 
-### Color Scheme
-- Primary: Purple gradient (#667eea to #764ba2)
-- Secondary: Dark blue (#2c3e50)
-- Accent: Success green (#28a745)
-- Text: Dark gray (#333) and light gray (#6c757d)
+### 3. Preços (`pricing.html`)
+- **3 Planos**: Free, Growth, Enterprise
+- **Toggle**: Mensal/Anual com desconto
+- **Calculadora**: Preços dinâmicos
+- **FAQ**: Perguntas frequentes
 
-### Typography
-- **Headings**: Inter font, 600-700 weight
-- **Body Text**: Inter font, 400 weight
-- **Buttons**: Uppercase with letter spacing
+### 4. Parceiros (`partners.html`)
+- **Grid de Logos**: Parceiros estratégicos
+- **Benefícios**: Vantagens de ser parceiro
+- **CTA**: Contacto para parcerias
 
-### Animations
-- Fade-in animations for content
-- Floating animation for hero icon
-- Hover effects on service cards
-- Ripple effects on buttons
-- Smooth transitions throughout
+## 🛠️ Tecnologias Utilizadas
 
-## 📱 Responsive Breakpoints
+- **HTML5**: Estrutura semântica
+- **CSS3**: Flexbox, Grid, animações, variáveis CSS
+- **JavaScript**: Interatividade, navegação mobile, lazy loading
+- **Google Fonts**: Inter (tipografia)
+- **SVG**: Ícones e logos vetoriais
 
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
-- **Small Mobile**: Below 480px
+## 🎯 Funcionalidades JavaScript
 
-## 🚀 Getting Started
+- **Navegação Mobile**: Menu hambúrguer responsivo
+- **Smooth Scrolling**: Rolagem suave entre seções
+- **Intersection Observer**: Animações no scroll
+- **Lazy Loading**: Carregamento otimizado de imagens
+- **Pricing Calculator**: Calculadora de preços dinâmica
+- **Form Validation**: Validação de formulários
+- **Back to Top**: Botão de voltar ao topo
 
-1. Clone or download the project files
-2. Open `index.html` in a web browser
-3. The website is ready to use!
+## 📱 Responsividade
 
-## 📝 Customization
+- **Desktop**: Layout completo com grid de 3-4 colunas
+- **Tablet**: Layout adaptado com 2 colunas
+- **Mobile**: Layout single-column com menu hambúrguer
 
-### Colors
-Edit the CSS variables in `css/main.css` to change the color scheme:
+## 🔧 Como Usar
+
+1. **Clone o repositório**:
+   ```bash
+   git clone [url-do-repositorio]
+   cd lumy-tv-website
+   ```
+
+2. **Abra no navegador**:
+   - Abra `index.html` no seu navegador
+   - Ou use um servidor local:
+   ```bash
+   python -m http.server 8000
+   # ou
+   npx serve .
+   ```
+
+3. **Desenvolvimento**:
+   - Edite os arquivos HTML, CSS e JS
+   - As mudanças são aplicadas automaticamente
+
+## 🖼️ Imagens Necessárias
+
+Para completar o website, você precisará adicionar as seguintes imagens na pasta `images/`:
+
+### Logos e Ícones
+- ✅ `lumy-logo.svg` - Logo principal
+- ✅ `lumy-logo-white.svg` - Logo branco
+
+### Imagens de Conteúdo
+- `hero-mockup.webp` - Mockup do produto na home
+- `use-cases-hero.webp` - Hero dos casos de uso
+- `retail-use-case.webp` - Caso de uso retail
+- `restaurant-use-case.webp` - Caso de uso restaurantes
+- `education-use-case.webp` - Caso de uso educação
+- `transport-use-case.webp` - Caso de uso transportes
+- `corporate-use-case.webp` - Caso de uso corporate
+- `events-use-case.webp` - Caso de uso eventos
+
+### Logos de Parceiros
+- `partner-1.svg` até `partner-8.svg` - Logos dos parceiros
+
+## 🎨 Personalização
+
+### Cores
+As cores estão definidas como variáveis CSS em `css/style.css`:
 ```css
-/* Primary gradient */
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-```
-
-### Content
-Update the content in `index.html` to match your business:
-- Company name and description
-- Services offered
-- Statistics and numbers
-- Contact information
-
-### Animations
-Modify animation durations and effects in `css/main.css`:
-```css
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+:root {
+    --primary-green: #A6E3D0;
+    --primary-yellow: #FDDC5C;
+    --white: #FFFFFF;
+    --light-gray: #F1FAEE;
+    --dark-gray: #2D3748;
+    --text-gray: #4A5568;
+    --border-gray: #E2E8F0;
 }
 ```
 
-## 🔧 Browser Support
+### Tipografia
+A fonte Inter está carregada via Google Fonts. Para alterar:
+1. Mude o link no `<head>` dos arquivos HTML
+2. Atualize `--font-family` no CSS
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Internet Explorer 11+
+## 📈 SEO
 
-## 📄 License
+O website está otimizado para SEO com:
+- Meta tags completas
+- Open Graph tags
+- Estrutura semântica (H1, H2, H3)
+- Alt text em imagens
+- URLs descritivas
+- Sitemap (a ser implementado)
 
-This project is open source and available under the [MIT License](LICENSE).
+## 🚀 Deploy
 
-## 🤝 Contributing
+Para fazer deploy do website:
 
-Feel free to submit issues and enhancement requests!
+1. **Netlify**:
+   - Conecte o repositório
+   - Build command: vazio
+   - Publish directory: `.`
+
+2. **Vercel**:
+   - Importe o repositório
+   - Framework preset: Other
+   - Build command: vazio
+
+3. **GitHub Pages**:
+   - Vá para Settings > Pages
+   - Source: Deploy from a branch
+   - Branch: main
+
+## 📞 Suporte
+
+Para dúvidas ou sugestões:
+- Email: [seu-email@exemplo.com]
+- Website: [url-do-website]
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
-**Modern Web Solutions** - Creating digital experiences that drive results.
+**Lumy TV** - Transformando a comunicação digital com ecrãs inteligentes
