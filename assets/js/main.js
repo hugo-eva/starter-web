@@ -38,30 +38,47 @@
     const base = 9; const storagePerGb = 0.5; const monthly = screens * base + storageGb * storagePerGb;
     return annual ? monthly * 12 * 0.8 : monthly;
   }
-  function initCalculator() {
-    const el = document.querySelector('[data-calc-root]');
-    if (!el) return;
-    const screens = el.querySelector('[name="screens"]');
-    const storage = el.querySelector('[name="storage"]');
-    const billingButtons = Array.from(el.querySelectorAll('[data-billing]'));
-    const output = el.querySelector('[data-price-output]');
+  function initPricing() {
+    const calcRoots = Array.from(document.querySelectorAll('[data-calc-root]'));
+    if (!calcRoots.length) return;
+
     let annual = false;
-    function update() {
+    const toggleButtons = Array.from(document.querySelectorAll('[data-billing]'));
+
+    function updateCalc(el) {
+      const screens = el.querySelector('[name="screens"]');
+      const storage = el.querySelector('[name="storage"]');
+      const output = el.querySelector('[data-price-output]');
+      if (!screens || !storage || !output) return;
       const price = calculatePrice({ screens: Number(screens.value), storageGb: Number(storage.value), annual });
       output.textContent = annual ? formatEUR(price) + ' / ano' : formatEUR(price) + ' / mês';
     }
-    billingButtons.forEach(btn => {
+
+    function updateAll() { calcRoots.forEach(updateCalc); }
+
+    // Global toggle controls
+    toggleButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        billingButtons.forEach(b => b.setAttribute('aria-pressed', 'false'));
+        toggleButtons.forEach(b => b.setAttribute('aria-pressed', 'false'));
         btn.setAttribute('aria-pressed', 'true');
         annual = btn.dataset.billing === 'annual';
-        update();
+        updateAll();
       });
     });
-    screens.addEventListener('input', update);
-    storage.addEventListener('input', update);
-    update();
+
+    // Inputs within calculators
+    calcRoots.forEach(el => {
+      const screens = el.querySelector('[name="screens"]');
+      const storage = el.querySelector('[name="storage"]');
+      if (screens) screens.addEventListener('input', updateAll);
+      if (storage) storage.addEventListener('input', updateAll);
+    });
+
+    // Initialize default pressed state if present
+    const pressed = toggleButtons.find(b => b.getAttribute('aria-pressed') === 'true');
+    annual = pressed ? pressed.dataset.billing === 'annual' : false;
+    updateAll();
   }
-  document.addEventListener('DOMContentLoaded', initCalculator);
+  document.addEventListener('DOMContentLoaded', initPricing);
 })();
 
