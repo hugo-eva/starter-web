@@ -2311,3 +2311,252 @@ blockquote.card strong {
   }
 }
 
+/* Use Cases Section Styles */
+.use-cases-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.use-cases-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.use-case-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.use-case-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.use-case-item:hover::before {
+    transform: scaleX(1);
+}
+
+.use-case-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.use-case-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.use-case-icon {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.use-case-icon i {
+    font-size: 3rem;
+    color: #4ecdc4;
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.use-case-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 600;
+}
+
+.use-case-text h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: white;
+    font-weight: 600;
+}
+
+.use-case-text h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-weight: 600;
+}
+
+.use-case-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.use-case-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.use-case-features li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    opacity: 0.9;
+}
+
+.use-case-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
+/* Sub-cases styling */
+.sub-cases {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sub-case {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sub-case:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.sub-case .use-case-icon i {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.sub-case .use-case-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.sub-case .use-case-text p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* Sub-sub-cases styling */
+.sub-sub-case {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-sub-case:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+.sub-sub-case .use-case-icon i {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sub-sub-case .use-case-text h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sub-sub-case .use-case-text p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.sub-sub-case .use-case-features li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for use cases */
+@media (max-width: 768px) {
+    .use-cases-section {
+        padding: 3rem 0;
+    }
+    
+    .use-cases-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .use-case-item {
+        padding: 1.5rem;
+    }
+    
+    .sub-case {
+        padding: 1rem;
+    }
+    
+    .sub-sub-case {
+        padding: 0.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .use-case-icon i {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 2.5rem;
+    }
+}
+
