@@ -42,7 +42,10 @@
     lazyImages.forEach(img => { img.src = img.dataset.src; img.removeAttribute('data-src'); });
   }
 
-  function formatEUR(value) { return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(value); }
+  function formatEUR(value) { 
+    const locale = window.i18n && window.i18n.currentLanguage === 'en' ? 'en-US' : 'pt-PT';
+    return new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).format(value); 
+  }
   function calculatePrice({ screens, storageGb, annual }) {
     const base = 9; const storagePerGb = 0.5; const monthly = screens * base + storageGb * storagePerGb;
     return annual ? monthly * 12 * 0.8 : monthly;
@@ -60,7 +63,8 @@
       const output = el.querySelector('[data-price-output]');
       if (!screens || !storage || !output) return;
       const price = calculatePrice({ screens: Number(screens.value), storageGb: Number(storage.value), annual });
-      output.textContent = annual ? formatEUR(price) + ' / ano' : formatEUR(price) + ' / mês';
+      const isEnglish = document.documentElement.lang === 'en';
+      output.textContent = annual ? formatEUR(price) + (isEnglish ? ' / year' : ' / ano') : formatEUR(price) + (isEnglish ? ' / month' : ' / mês');
     }
 
     function updateAll() { calcRoots.forEach(updateCalc); }
@@ -96,9 +100,14 @@
     if (toggles.length) {
       function updateLabels() {
         const isDark = document.documentElement.classList.contains('dark');
+        const isEnglish = document.documentElement.lang === 'en';
         toggles.forEach(t => {
           t.setAttribute('aria-pressed', String(isDark));
-          t.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+          if (isEnglish) {
+            t.textContent = isDark ? 'Light mode' : 'Dark mode';
+          } else {
+            t.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+          }
         });
       }
       toggles.forEach(t => t.addEventListener('click', function () {
