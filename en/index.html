@@ -47,14 +47,24 @@
           <a href="./partners/">Partners</a>
           <a href="./contact/">Contact</a>
         </nav>
-        <div class="language-switcher">
-          <a href="../" class="lang-link" title="Português">PT</a>
-          <span class="lang-separator">|</span>
-          <a href="./" class="lang-link active" title="English">EN</a>
+        <div class="nav-actions">
+          <div class="language-switcher">
+            <a href="../" class="lang-link" title="Português">PT</a>
+            <span class="lang-separator">|</span>
+            <a href="./" class="lang-link active" title="English">EN</a>
+          </div>
+          <a class="btn btn-outline nav-login" href="./contact/">Login</a>
+          <a class="btn btn-accent nav-cta" href="./contact/#demo">Request Demo</a>
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
         </div>
-        <a class="btn btn-accent nav-cta" href="./contact/#demo">Request Demo</a>
-        <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false" style="margin-left:8px">Dark mode</button>
-        <button class="btn btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>Menu</button>
+        <button class="btn btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-toggle-text">Menu</span>
+        </button>
       </div>
       <div id="mobile-menu" class="mobile-menu" hidden>
         <div class="container">
@@ -65,8 +75,16 @@
             <a href="./contact/">Contact</a>
           </nav>
           <div class="mobile-actions">
+            <a class="btn btn-outline" href="./contact/">Login</a>
             <a class="btn btn-accent" href="./contact/#demo">Request Demo</a>
-            <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+            <div class="mobile-meta">
+              <div class="language-switcher">
+                <a href="../" class="lang-link" title="Português">PT</a>
+                <span class="lang-separator">|</span>
+                <a href="./" class="lang-link active" title="English">EN</a>
+              </div>
+              <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+            </div>
           </div>
         </div>
       </div>
