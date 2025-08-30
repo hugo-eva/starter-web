@@ -42,7 +42,10 @@
     lazyImages.forEach(img => { img.src = img.dataset.src; img.removeAttribute('data-src'); });
   }
 
-  function formatEUR(value) { return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(value); }
+  function formatEUR(value) { 
+    const locale = window.i18n && window.i18n.currentLanguage === 'en' ? 'en-US' : 'pt-PT';
+    return new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).format(value); 
+  }
   function calculatePrice({ screens, storageGb, annual }) {
     const base = 9; const storagePerGb = 0.5; const monthly = screens * base + storageGb * storagePerGb;
     return annual ? monthly * 12 * 0.8 : monthly;
