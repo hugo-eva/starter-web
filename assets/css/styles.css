@@ -68,6 +68,16 @@ p, .lead {
   backdrop-filter: saturate(180%) blur(8px);
   border-bottom: 1px solid rgba(229,231,235,0.6);
 }
+
+/* Main content spacing to account for sticky header */
+main {
+  margin-top: 0;
+}
+
+/* Ensure first section after header has proper spacing */
+main > section:first-child {
+  position: relative;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -221,7 +231,7 @@ p, .lead {
 /* Hero */
 .hero {
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 50%, var(--accent-light) 100%);
-  padding: 60px 0 80px;
+  padding: 80px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -375,7 +385,7 @@ p, .lead {
 
 /* Hero responsive improvements */
 @media (min-width: 768px) {
-  .hero { padding: 80px 0 100px; }
+  .hero { padding: 100px 0 100px; }
   .hero-content { text-align: left; }
   .hero-actions { justify-content: flex-start; }
   .hero-note { text-align: left; }
@@ -673,7 +683,7 @@ input:focus, textarea:focus { outline: 2px solid rgba(13,148,136,.35); outline-o
 @media (max-width: 480px) {
   .btn { height: 44px; padding: 0 20px; font-size: 0.9rem; }
   .btn-large { height: 52px; padding: 0 28px; font-size: 1rem; }
-  .hero { padding: 40px 0 60px; }
+  .hero { padding: 60px 0 60px; }
   .hero h1 { font-size: 2rem; }
   .hero-description { font-size: 1rem; }
   .hero-stats { 
