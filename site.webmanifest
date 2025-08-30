@@ -1,13 +1,13 @@
 {
   "name": "Lumy TV",
   "short_name": "Lumy",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b132b",
   "icons": [
     {
-      "src": "/assets/img/logo.svg",
+      "src": "assets/img/logo.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
