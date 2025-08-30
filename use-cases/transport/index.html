@@ -22,10 +22,30 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="../../"><span class="brand-badge"><img alt="Lumy TV" src="../../assets/img/logo.svg" width="24" height="24"></span><span>Lumy TV</span></a>
-        <nav class="nav-links" aria-label="Principal"><a href="../" aria-current="page">Casos de Uso</a><a href="../../pricing/">Preços</a><a href="../../partners/">Parceiros</a><a href="../../contact/">Contacto</a></nav>
-        <a class="btn btn-accent nav-cta" href="../../contact/#demo">Peça uma Demo</a>
-        <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false" style="margin-left:8px">Modo escuro</button>
-        <button class="btn btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>Menu</button>
+        <nav class="nav-links" aria-label="Principal">
+          <a href="../" aria-current="page">Casos de Uso</a>
+          <a href="../../pricing/">Preços</a>
+          <a href="../../partners/">Parceiros</a>
+          <a href="../../contact/">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="language-switcher">
+            <a href="../" class="lang-link active" title="Português">PT</a>
+            <span class="lang-separator">|</span>
+            <a href="../../en/use-cases/" class="lang-link" title="English">EN</a>
+          </div>
+          <a class="btn btn-outline nav-login" href="../../contact/">Login</a>
+          <a class="btn btn-accent nav-cta" href="../../contact/#demo">Peça uma Demo</a>
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Modo escuro</button>
+        </div>
+        <button class="btn btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-toggle-text">Menu</span>
+        </button>
       </div>
       <div id="mobile-menu" class="mobile-menu" hidden>
         <div class="container">
@@ -36,8 +56,16 @@
             <a href="../../contact/">Contacto</a>
           </nav>
           <div class="mobile-actions">
+            <a class="btn btn-outline" href="../../contact/">Login</a>
             <a class="btn btn-accent" href="../../contact/#demo">Peça uma Demo</a>
-            <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Modo escuro</button>
+            <div class="mobile-meta">
+              <div class="language-switcher">
+                <a href="../" class="lang-link active" title="Português">PT</a>
+                <span class="lang-separator">|</span>
+                <a href="../../en/use-cases/" class="lang-link" title="English">EN</a>
+              </div>
+              <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Modo escuro</button>
+            </div>
           </div>
         </div>
       </div>
