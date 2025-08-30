@@ -92,6 +92,49 @@ p, .lead {
 /* Hide header theme toggle on mobile; show on desktop */
 .nav [data-theme-toggle] { display: none; }
 
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.lang-link {
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+
+.lang-link:hover {
+  color: var(--primary);
+}
+
+.lang-link.active {
+  color: var(--primary);
+  background: var(--gray-100);
+}
+
+.lang-separator {
+  color: var(--border);
+}
+
+/* Image and Icon Placeholders */
+.image-placeholder, .icon-placeholder {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 2px dashed var(--border);
+  transition: all 0.2s ease;
+}
+
+.image-placeholder:hover, .icon-placeholder:hover {
+  border-color: var(--primary);
+  background: var(--gray-50) !important;
+}
+
 @media (min-width: 860px) {
   .nav-links { display: flex; }
   .nav-cta { display: inline-flex; }

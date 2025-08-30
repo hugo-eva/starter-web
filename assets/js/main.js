@@ -63,7 +63,8 @@
       const output = el.querySelector('[data-price-output]');
       if (!screens || !storage || !output) return;
       const price = calculatePrice({ screens: Number(screens.value), storageGb: Number(storage.value), annual });
-      output.textContent = annual ? formatEUR(price) + ' / ano' : formatEUR(price) + ' / mês';
+      const isEnglish = document.documentElement.lang === 'en';
+      output.textContent = annual ? formatEUR(price) + (isEnglish ? ' / year' : ' / ano') : formatEUR(price) + (isEnglish ? ' / month' : ' / mês');
     }
 
     function updateAll() { calcRoots.forEach(updateCalc); }
@@ -99,9 +100,14 @@
     if (toggles.length) {
       function updateLabels() {
         const isDark = document.documentElement.classList.contains('dark');
+        const isEnglish = document.documentElement.lang === 'en';
         toggles.forEach(t => {
           t.setAttribute('aria-pressed', String(isDark));
-          t.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+          if (isEnglish) {
+            t.textContent = isDark ? 'Light mode' : 'Dark mode';
+          } else {
+            t.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+          }
         });
       }
       toggles.forEach(t => t.addEventListener('click', function () {
