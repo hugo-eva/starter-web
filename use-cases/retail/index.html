@@ -11,7 +11,9 @@
     <link rel="mask-icon" href="../../assets/img/logo.svg" color="#0b132b" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script defer src="../../assets/js/main.js"></script>
@@ -71,74 +73,206 @@
       </div>
     </header>
     <main id="content">
-      <section class="use-case-hero">
+      <section class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <span class="hero-kicker">Retail & Lojas</span>
+            <span class="hero-badge">Solução para Retail</span>
             <h1>Retail Digital que Converte</h1>
-            <p class="lead">Transforme as suas lojas com promoções em tempo real, personalização por geolocalização e playlists dinâmicas que aumentam as vendas e melhoram a experiência do cliente.</p>
+            <p class="hero-description">Transforme as suas lojas com promoções em tempo real, personalização por geolocalização e playlists dinâmicas que aumentam as vendas e melhoram a experiência do cliente.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">40%</span>
+                <span class="stat-label">Aumento Vendas</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Lojas Conectadas</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Campanhas Ativas</span>
+              </div>
+            </div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="../../contact/#demo">Peça uma Demo</a>
-              <a class="btn btn-ghost" href="../../pricing/">Ver Preços</a>
+              <a class="btn btn-primary btn-large" href="../../contact/#demo">Iniciar Teste Gratuito</a>
+              <a class="btn btn-ghost btn-large" href="../../pricing/">Ver Preços</a>
             </div>
+            <p class="hero-note">Sem cartão de crédito • Configuração em 5 minutos</p>
           </div>
-          <div class="hero-card">
-            <div class="screen-mockup" role="img" aria-label="Retail com Lumy TV">
-              <span class="status">● Live sync</span>
-              <img src="../../assets/img/mockup-retail.svg" alt="Video wall de loja com Lumy TV" loading="lazy" width="800" height="500">
+          <div class="hero-visual">
+            <div class="hero-mockup">
+              <div class="mockup-header">
+                <span class="status-indicator">● Live</span>
+                <span class="mockup-title">Retail Dashboard</span>
+              </div>
+              <div class="mockup-content">
+                <img src="../../assets/img/mockup-retail.svg" alt="Video wall de loja mostrando promoções dinâmicas, campanhas sazonais e conteúdo personalizado" loading="eager" fetchpriority="high" decoding="async" width="800" height="500">
+              </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section class="benefits-section">
+
+      <section class="how-it-works">
         <div class="container">
-          <h2 class="section-title">Benefícios para Retail</h2>
-          <ul class="list-checks">
-            <li><span class="icon">✓</span> Promoções em tempo real</li>
-            <li><span class="icon">✓</span> Geolocalização e segmentação por loja</li>
-            <li><span class="icon">✓</span> Playlists diferentes por ecrã</li>
-            <li><span class="icon">✓</span> Integração com IFTTT e beacons</li>
-            <li><span class="icon">✓</span> Gestão centralizada de campanhas</li>
-            <li><span class="icon">✓</span> Analytics e métricas de performance</li>
-          </ul>
+          <div class="section-header">
+            <h2>Como Funciona no Retail</h2>
+            <p class="section-subtitle">Implemente digital signage para retail em três passos simples</p>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <div class="step-icon">
+                <img src="../../assets/img/retail-store.svg" alt="Ícone retail" width="48" height="48">
+              </div>
+              <h3>Configure os Ecrãs</h3>
+              <p>Instale os players Lumy TV nos ecrãs das suas lojas e conecte-os à rede para gestão centralizada.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <div class="step-icon">
+                <img src="../../assets/img/feature-cms.svg" alt="Ícone CMS" width="48" height="48">
+              </div>
+              <h3>Carregue Campanhas</h3>
+              <p>Adicione promoções, produtos e conteúdo personalizado por loja com o sistema de gestão intuitivo.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <div class="step-icon">
+                <img src="../../assets/img/feature-reactive.svg" alt="Ícone automação" width="48" height="48">
+              </div>
+              <h3>Automatize Promoções</h3>
+              <p>Configure campanhas automáticas por geolocalização, horário e eventos que aumentam as vendas.</p>
+            </div>
+          </div>
         </div>
       </section>
-      
-      <section class="examples-section">
+
+      <section class="features">
         <div class="container">
-          <h2 class="section-title">Soluções para Retail</h2>
-          <div class="grid cols-2">
-            <div class="card">
-              <h3>Campanhas Sazonais</h3>
-              <p class="muted">Planeie e automatize campanhas de Natal, Black Friday e saldos por loja com atualizações instantâneas.</p>
-              <img src="../../assets/img/mockup-retail.svg" alt="Campanhas sazonais em loja" loading="lazy" width="600" height="360">
+          <div class="section-header">
+            <h2>Funcionalidades para Retail</h2>
+            <p class="section-subtitle">Tudo o que precisa para digital signage em retail</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card featured">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img src="../../assets/img/retail-store.svg" alt="Ícone retail" width="56" height="56">
+                </div>
+                <div>
+                  <h3>Promoções em Tempo Real</h3>
+                  <p class="feature-description">Atualize campanhas, preços e promoções instantaneamente em todas as lojas com personalização por localização</p>
+                </div>
+              </div>
+              <ul class="feature-list">
+                <li><span class="check-icon">✓</span> Campanhas sazonais automáticas</li>
+                <li><span class="check-icon">✓</span> Personalização por geolocalização</li>
+                <li><span class="check-icon">✓</span> Playlists diferentes por ecrã</li>
+                <li><span class="check-icon">✓</span> Integração com IFTTT e beacons</li>
+                <li><span class="check-icon">✓</span> Gestão centralizada de campanhas</li>
+                <li><span class="check-icon">✓</span> Analytics e métricas de performance</li>
+              </ul>
             </div>
-            <div class="card">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="../../assets/img/feature-cms.svg" alt="Ícone CMS" width="56" height="56">
+              </div>
               <h3>Video Walls Imersivos</h3>
-              <p class="muted">Crie experiências visuais impactantes com ecrãs sincronizados e conteúdos dinâmicos que capturam a atenção.</p>
-              <img src="../../assets/img/mockup-retail.svg" alt="Video wall de retalho" loading="lazy" width="600" height="360">
+              <p>Crie experiências visuais impactantes com ecrãs sincronizados e conteúdos dinâmicos que capturam a atenção.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="../../assets/img/feature-ifttt.svg" alt="Ícone IFTTT" width="56" height="56">
+              </div>
+              <h3>Automação IFTTT</h3>
+              <p>Conecte com sistemas de inventário, CRM e aplicações para campanhas automáticas baseadas em eventos.</p>
             </div>
           </div>
         </div>
       </section>
-      
-      <section class="testimonial-section">
+
+      <section class="testimonials">
         <div class="container">
-          <blockquote class="card">"Com o Lumy TV conseguimos atualizar todas as campanhas em tempo real, aumentando significativamente a eficácia das nossas promoções." — <strong>João Silva, Diretor de Marketing da FashionStore</strong></blockquote>
+          <div class="section-header">
+            <h2>Confiado por Empresas de Retail</h2>
+            <p class="section-subtitle">Veja o que os nossos clientes de retail dizem</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Com o Lumy TV conseguimos atualizar todas as campanhas em tempo real, aumentando significativamente a eficácia das nossas promoções."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">JS</div>
+                <div class="author-info">
+                  <strong>João Silva</strong>
+                  <span>Diretor de Marketing, FashionStore</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A personalização por geolocalização revolucionou a forma como comunicamos com os nossos clientes. As vendas aumentaram 40%."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">ML</div>
+                <div class="author-info">
+                  <strong>Maria Lima</strong>
+                  <span>Gestora de Operações, RetailChain</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Os video walls sincronizados criam uma experiência visual incrível que aumenta o tempo de permanência dos clientes na loja."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AS</div>
+                <div class="author-info">
+                  <strong>André Santos</strong>
+                  <span>Diretor de Experiência, TechRetail</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      
-      <section class="use-case-cta">
+
+      <section class="cta">
         <div class="container">
-          <div class="cta-box">
-            <h2>Quer dar vida às suas campanhas em loja?</h2>
-            <a class="btn btn-primary" href="../../contact/#demo">Peça uma Demo</a>
+          <div class="cta-content">
+            <h2>Pronto para Transformar o Seu Retail?</h2>
+            <p class="cta-description">Junte-se a centenas de empresas de retail que usam a Lumy TV para criar experiências digitais envolventes e aumentar as vendas.</p>
+            <div class="cta-actions">
+              <a class="btn btn-primary btn-large" href="../../contact/#demo">Iniciar Teste Gratuito</a>
+              <a class="btn btn-ghost btn-large" href="../../contact/">Contactar Vendas</a>
+            </div>
+            <div class="cta-features">
+              <span>✓ Teste gratuito de 14 dias</span>
+              <span>✓ Sem taxas de configuração</span>
+              <span>✓ Suporte 24/7</span>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;"><p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p><div class="socials" aria-label="Redes sociais"><a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a><a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a></div></div><script>document.getElementById('y').textContent = new Date().getFullYear();</script></footer>
+    <footer class="site-footer">
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;">
+        <p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p>
+        <div class="footer-links" aria-label="Mapa do site">
+          <a class="pill" href="../">Casos de Uso</a>
+          <a class="pill" href="../../pricing/">Preços</a>
+          <a class="pill" href="../../partners/">Parceiros</a>
+          <a class="pill" href="../../contact/">Contacto</a>
+        </div>
+        <div class="socials" aria-label="Redes sociais">
+          <a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
   </body>
-  </html>
+</html>
 
