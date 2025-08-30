@@ -11,7 +11,9 @@
     <link rel="mask-icon" href="../../assets/img/logo.svg" color="#0b132b" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script defer src="../../assets/js/main.js"></script>
@@ -71,74 +73,206 @@
       </div>
     </header>
     <main id="content">
-      <section class="use-case-hero">
+      <section class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <span class="hero-kicker">Eventos & Feiras</span>
+            <span class="hero-badge">Solução para Eventos</span>
             <h1>Eventos Digitais que Impressionam</h1>
-            <p class="lead">Transforme a experiência dos seus eventos com programas dinâmicos, gestão inteligente de patrocínios e wayfinding em tempo real para experiências memoráveis.</p>
+            <p class="hero-description">Transforme a experiência dos seus eventos com programas dinâmicos, gestão inteligente de patrocínios e wayfinding em tempo real para experiências memoráveis.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Eventos Realizados</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">Participantes</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">Satisfação</span>
+              </div>
+            </div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="../../contact/#demo">Peça uma Demo</a>
-              <a class="btn btn-ghost" href="../../pricing/">Ver Preços</a>
+              <a class="btn btn-primary btn-large" href="../../contact/#demo">Iniciar Teste Gratuito</a>
+              <a class="btn btn-ghost btn-large" href="../../pricing/">Ver Preços</a>
             </div>
+            <p class="hero-note">Sem cartão de crédito • Configuração em 5 minutos</p>
           </div>
-          <div class="hero-card">
-            <div class="screen-mockup" role="img" aria-label="Eventos com Lumy TV">
-              <span class="status">● Live sync</span>
-              <img src="../../assets/img/mockup-events.svg" alt="Ecrã de programa de evento" loading="eager" fetchpriority="high" decoding="async" width="800" height="500">
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="benefits-section">
-        <div class="container">
-          <h2 class="section-title">Benefícios para Eventos</h2>
-          <ul class="list-checks">
-            <li><span class="icon">✓</span> Programas e salas atualizados</li>
-            <li><span class="icon">✓</span> Gestão de patrocínios dinâmica</li>
-            <li><span class="icon">✓</span> Wayfinding claro e acessível</li>
-            <li><span class="icon">✓</span> Integração com bilhética</li>
-            <li><span class="icon">✓</span> Atualizações em tempo real</li>
-            <li><span class="icon">✓</span> Gestão remota de conteúdo</li>
-          </ul>
-        </div>
-      </section>
-      
-      <section class="examples-section">
-        <div class="container">
-          <h2 class="section-title">Soluções para Eventos</h2>
-          <div class="grid cols-2">
-            <div class="card">
-              <h3>Programas ao Minuto</h3>
-              <p class="muted">Atualizações instantâneas de sessões, palestrantes e salas com sincronização automática em todos os ecrãs.</p>
-              <img src="../../assets/img/mockup-events.svg" alt="Programas ao minuto" loading="lazy" width="600" height="360">
-            </div>
-            <div class="card">
-              <h3>Patrocínios Inteligentes</h3>
-              <p class="muted">Rotação e segmentação por local e horário com gestão automática de campanhas publicitárias.</p>
-              <img src="../../assets/img/mockup-events.svg" alt="Patrocínios inteligentes" loading="lazy" width="600" height="360">
+          <div class="hero-visual">
+            <div class="hero-mockup">
+              <div class="mockup-header">
+                <span class="status-indicator">● Live</span>
+                <span class="mockup-title">Event Dashboard</span>
+              </div>
+              <div class="mockup-content">
+                <img src="../../assets/img/mockup-events.svg" alt="Ecrã de programa de evento mostrando horários, palestrantes e informações em tempo real" loading="eager" fetchpriority="high" decoding="async" width="800" height="500">
+              </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section class="testimonial-section">
+
+      <section class="how-it-works">
         <div class="container">
-          <blockquote class="card">"A gestão de patrocínios e horários tornou-se simples e ágil, permitindo-nos focar no que realmente importa: criar experiências excecionais." — <strong>Pedro Rocha, Diretor de Eventos da TechExpo</strong></blockquote>
+          <div class="section-header">
+            <h2>Como Funciona nos Eventos</h2>
+            <p class="section-subtitle">Implemente digital signage para eventos em três passos simples</p>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <div class="step-icon">
+                <img src="../../assets/img/events.svg" alt="Ícone eventos" width="48" height="48">
+              </div>
+              <h3>Configure os Ecrãs</h3>
+              <p>Instale os players Lumy TV nos ecrãs do evento e conecte-os à rede para gestão centralizada.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <div class="step-icon">
+                <img src="../../assets/img/feature-cms.svg" alt="Ícone CMS" width="48" height="48">
+              </div>
+              <h3>Carregue Conteúdo do Evento</h3>
+              <p>Adicione programas, patrocínios, wayfinding e informações do evento com o sistema de gestão intuitivo.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <div class="step-icon">
+                <img src="../../assets/img/feature-reactive.svg" alt="Ícone automação" width="48" height="48">
+              </div>
+              <h3>Automatize Atualizações</h3>
+              <p>Configure atualizações automáticas de horários, alertas e rotação de patrocínios em tempo real.</p>
+            </div>
+          </div>
         </div>
       </section>
-      
-      <section class="use-case-cta">
+
+      <section class="features">
         <div class="container">
-          <div class="cta-box">
-            <h2>Leve o seu evento a outro nível</h2>
-            <a class="btn btn-primary" href="../../contact/#demo">Peça uma Demo</a>
+          <div class="section-header">
+            <h2>Funcionalidades para Eventos</h2>
+            <p class="section-subtitle">Tudo o que precisa para digital signage em eventos</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card featured">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img src="../../assets/img/events.svg" alt="Ícone eventos" width="56" height="56">
+                </div>
+                <div>
+                  <h3>Programas Dinâmicos</h3>
+                  <p class="feature-description">Atualize horários, palestrantes e salas em tempo real com sincronização automática em todos os ecrãs</p>
+                </div>
+              </div>
+              <ul class="feature-list">
+                <li><span class="check-icon">✓</span> Horários atualizados em tempo real</li>
+                <li><span class="check-icon">✓</span> Informações de palestrantes</li>
+                <li><span class="check-icon">✓</span> Localização de salas</li>
+                <li><span class="check-icon">✓</span> Alertas e anúncios</li>
+                <li><span class="check-icon">✓</span> Integração com bilhética</li>
+                <li><span class="check-icon">✓</span> Wayfinding inteligente</li>
+              </ul>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="../../assets/img/feature-cms.svg" alt="Ícone CMS" width="56" height="56">
+              </div>
+              <h3>Gestão de Patrocínios</h3>
+              <p>Rotacione e segmente patrocínios por local e horário com gestão automática de campanhas publicitárias.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="../../assets/img/feature-ifttt.svg" alt="Ícone IFTTT" width="56" height="56">
+              </div>
+              <h3>Automação IFTTT</h3>
+              <p>Conecte com sistemas de bilhética, calendários e aplicações para atualizações automáticas baseadas em eventos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <h2>Confiado por Organizadores de Eventos</h2>
+            <p class="section-subtitle">Veja o que os nossos clientes de eventos dizem</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A gestão de patrocínios e horários tornou-se simples e ágil, permitindo-nos focar no que realmente importa: criar experiências excecionais."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">PR</div>
+                <div class="author-info">
+                  <strong>Pedro Rocha</strong>
+                  <span>Diretor de Eventos, TechExpo</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A atualização automática dos horários eliminou a confusão e melhorou significativamente a experiência dos participantes."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">SL</div>
+                <div class="author-info">
+                  <strong>Sofia Lima</strong>
+                  <span>Gestora de Eventos, ConferenceHub</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"O wayfinding inteligente e a gestão de patrocínios automatizada revolucionaram a forma como organizamos os nossos eventos."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AM</div>
+                <div class="author-info">
+                  <strong>André Martins</strong>
+                  <span>Diretor de Operações, EventPro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Pronto para Transformar os Seus Eventos?</h2>
+            <p class="cta-description">Junte-se a centenas de organizadores que usam a Lumy TV para criar experiências digitais memoráveis e eventos de sucesso.</p>
+            <div class="cta-actions">
+              <a class="btn btn-primary btn-large" href="../../contact/#demo">Iniciar Teste Gratuito</a>
+              <a class="btn btn-ghost btn-large" href="../../contact/">Contactar Vendas</a>
+            </div>
+            <div class="cta-features">
+              <span>✓ Teste gratuito de 14 dias</span>
+              <span>✓ Sem taxas de configuração</span>
+              <span>✓ Suporte 24/7</span>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;"><p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p><div class="footer-links" aria-label="Mapa do site"><a class="pill" href="../">Casos de Uso</a><a class="pill" href="../../pricing/">Preços</a><a class="pill" href="../../partners/">Parceiros</a><a class="pill" href="../../contact/">Contacto</a></div><div class="socials" aria-label="Redes sociais"><a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a><a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a></div></div><script>document.getElementById('y').textContent = new Date().getFullYear();</script></footer>
+    <footer class="site-footer">
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;">
+        <p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p>
+        <div class="footer-links" aria-label="Mapa do site">
+          <a class="pill" href="../">Casos de Uso</a>
+          <a class="pill" href="../../pricing/">Preços</a>
+          <a class="pill" href="../../partners/">Parceiros</a>
+          <a class="pill" href="../../contact/">Contacto</a>
+        </div>
+        <div class="socials" aria-label="Redes sociais">
+          <a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
   </body>
-  </html>
+</html>
 

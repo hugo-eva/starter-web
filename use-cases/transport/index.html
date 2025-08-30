@@ -11,7 +11,9 @@
     <link rel="mask-icon" href="../../assets/img/logo.svg" color="#0b132b" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script defer src="../../assets/js/main.js"></script>
@@ -71,74 +73,206 @@
       </div>
     </header>
     <main id="content">
-      <section class="use-case-hero">
+      <section class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <span class="hero-kicker">Transportes Públicos</span>
+            <span class="hero-badge">Solução para Transportes</span>
             <h1>Transportes Inteligentes em Tempo Real</h1>
-            <p class="lead">Transforme a experiência dos passageiros com informação em tempo real, alertas inteligentes e conteúdos dinâmicos que tornam as viagens mais claras e eficientes.</p>
+            <p class="hero-description">Transforme a experiência dos passageiros com informação em tempo real, alertas inteligentes e conteúdos dinâmicos que tornam as viagens mais claras e eficientes.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">1M+</span>
+                <span class="stat-label">Passageiros Informados</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">Disponibilidade</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Informação Atualizada</span>
+              </div>
+            </div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="../../contact/#demo">Peça uma Demo</a>
-              <a class="btn btn-ghost" href="../../pricing/">Ver Preços</a>
+              <a class="btn btn-primary btn-large" href="../../contact/#demo">Iniciar Teste Gratuito</a>
+              <a class="btn btn-ghost btn-large" href="../../pricing/">Ver Preços</a>
             </div>
+            <p class="hero-note">Sem cartão de crédito • Configuração em 5 minutos</p>
           </div>
-          <div class="hero-card">
-            <div class="screen-mockup" role="img" aria-label="Transportes com Lumy TV">
-              <span class="status">● Live sync</span>
-              <img src="../../assets/img/mockup-transport.svg" alt="Ecrã em estação de transportes" loading="eager" fetchpriority="high" decoding="async" width="800" height="500">
+          <div class="hero-visual">
+            <div class="hero-mockup">
+              <div class="mockup-header">
+                <span class="status-indicator">● Live</span>
+                <span class="mockup-title">Transport Dashboard</span>
+              </div>
+              <div class="mockup-content">
+                <img src="../../assets/img/mockup-transport.svg" alt="Ecrã em estação de transportes mostrando horários, alertas e informações em tempo real" loading="eager" fetchpriority="high" decoding="async" width="800" height="500">
+              </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section class="benefits-section">
+
+      <section class="how-it-works">
         <div class="container">
-          <h2 class="section-title">Benefícios para Transportes</h2>
-          <ul class="list-checks">
-            <li><span class="icon">✓</span> Tempos de chegada em tempo real</li>
-            <li><span class="icon">✓</span> Alertas de interrupções e alterações</li>
-            <li><span class="icon">✓</span> Informação multilingue</li>
-            <li><span class="icon">✓</span> Integração com feeds oficiais</li>
-            <li><span class="icon">✓</span> Atualizações automáticas</li>
-            <li><span class="icon">✓</span> Gestão centralizada de conteúdo</li>
-          </ul>
+          <div class="section-header">
+            <h2>Como Funciona nos Transportes</h2>
+            <p class="section-subtitle">Implemente digital signage para transportes em três passos simples</p>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <div class="step-icon">
+                <img src="../../assets/img/transport.svg" alt="Ícone transportes" width="48" height="48">
+              </div>
+              <h3>Configure os Ecrãs</h3>
+              <p>Instale os players Lumy TV nos ecrãs das estações e conecte-os à rede para gestão centralizada.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <div class="step-icon">
+                <img src="../../assets/img/feature-cms.svg" alt="Ícone CMS" width="48" height="48">
+              </div>
+              <h3>Carregue Informações</h3>
+              <p>Adicione horários, alertas e informações de serviço com o sistema de gestão intuitivo.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <div class="step-icon">
+                <img src="../../assets/img/feature-reactive.svg" alt="Ícone automação" width="48" height="48">
+              </div>
+              <h3>Automatize Atualizações</h3>
+              <p>Configure atualizações automáticas de horários, alertas de interrupções e informações em tempo real.</p>
+            </div>
+          </div>
         </div>
       </section>
-      
-      <section class="examples-section">
+
+      <section class="features">
         <div class="container">
-          <h2 class="section-title">Soluções para Transportes</h2>
-          <div class="grid cols-2">
-            <div class="card">
-              <h3>Headways e ETA</h3>
-              <p class="muted">Mostre tempos de chegada, capacidade e conexões com atualizações automáticas em tempo real.</p>
-              <img src="../../assets/img/mockup-transport.svg" alt="Tempos de chegada" loading="lazy" width="600" height="360">
+          <div class="section-header">
+            <h2>Funcionalidades para Transportes</h2>
+            <p class="section-subtitle">Tudo o que precisa para digital signage em transportes</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card featured">
+              <div class="feature-header">
+                <div class="feature-icon">
+                  <img src="../../assets/img/transport.svg" alt="Ícone transportes" width="56" height="56">
+                </div>
+                <div>
+                  <h3>Informação em Tempo Real</h3>
+                  <p class="feature-description">Mostre horários, tempos de chegada e alertas com atualizações automáticas em tempo real</p>
+                </div>
+              </div>
+              <ul class="feature-list">
+                <li><span class="check-icon">✓</span> Tempos de chegada em tempo real</li>
+                <li><span class="check-icon">✓</span> Alertas de interrupções e alterações</li>
+                <li><span class="check-icon">✓</span> Informação multilingue</li>
+                <li><span class="check-icon">✓</span> Integração com feeds oficiais</li>
+                <li><span class="check-icon">✓</span> Atualizações automáticas</li>
+                <li><span class="check-icon">✓</span> Gestão centralizada de conteúdo</li>
+              </ul>
             </div>
-            <div class="card">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="../../assets/img/feature-cms.svg" alt="Ícone CMS" width="56" height="56">
+              </div>
               <h3>Alertas Contextuais</h3>
-              <p class="muted">Tráfego, clima e obras refletem-se instantaneamente nos ecrãs para manter os passageiros informados.</p>
-              <img src="../../assets/img/mockup-transport.svg" alt="Alertas contextuais" loading="lazy" width="600" height="360">
+              <p>Tráfego, clima e obras refletem-se instantaneamente nos ecrãs para manter os passageiros informados.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="../../assets/img/feature-ifttt.svg" alt="Ícone IFTTT" width="56" height="56">
+              </div>
+              <h3>Automação IFTTT</h3>
+              <p>Conecte com sistemas de transportes, APIs e aplicações para atualizações automáticas baseadas em eventos.</p>
             </div>
           </div>
         </div>
       </section>
-      
-      <section class="testimonial-section">
+
+      <section class="testimonials">
         <div class="container">
-          <blockquote class="card">"Os atrasos e alterações são comunicados de imediato aos utilizadores, melhorando significativamente a satisfação dos passageiros." — <strong>Carlos Mendes, Diretor de Operações da MetroLisboa</strong></blockquote>
+          <div class="section-header">
+            <h2>Confiado por Operadores de Transportes</h2>
+            <p class="section-subtitle">Veja o que os nossos clientes de transportes dizem</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"Os atrasos e alterações são comunicados de imediato aos utilizadores, melhorando significativamente a satisfação dos passageiros."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">CM</div>
+                <div class="author-info">
+                  <strong>Carlos Mendes</strong>
+                  <span>Diretor de Operações, MetroLisboa</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A integração com os nossos sistemas de controlo permite atualizações automáticas que reduzem a confusão dos passageiros."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AP</div>
+                <div class="author-info">
+                  <strong>Ana Pereira</strong>
+                  <span>Gestora de Sistemas, CP</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>"A informação multilingue e os alertas contextuais tornaram a experiência dos passageiros muito mais clara e eficiente."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">MS</div>
+                <div class="author-info">
+                  <strong>Miguel Santos</strong>
+                  <span>Diretor de Tecnologia, STCP</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      
-      <section class="use-case-cta">
+
+      <section class="cta">
         <div class="container">
-          <div class="cta-box">
-            <h2>Melhore a experiência dos passageiros</h2>
-            <a class="btn btn-primary" href="../../contact/#demo">Peça uma Demo</a>
+          <div class="cta-content">
+            <h2>Pronto para Transformar os Transportes?</h2>
+            <p class="cta-description">Junte-se a centenas de operadores de transportes que usam a Lumy TV para criar experiências digitais claras e informativas.</p>
+            <div class="cta-actions">
+              <a class="btn btn-primary btn-large" href="../../contact/#demo">Iniciar Teste Gratuito</a>
+              <a class="btn btn-ghost btn-large" href="../../contact/">Contactar Vendas</a>
+            </div>
+            <div class="cta-features">
+              <span>✓ Teste gratuito de 14 dias</span>
+              <span>✓ Sem taxas de configuração</span>
+              <span>✓ Suporte 24/7</span>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;"><p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p><div class="footer-links" aria-label="Mapa do site"><a class="pill" href="../">Casos de Uso</a><a class="pill" href="../../pricing/">Preços</a><a class="pill" href="../../partners/">Parceiros</a><a class="pill" href="../../contact/">Contacto</a></div><div class="socials" aria-label="Redes sociais"><a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a><a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a></div></div><script>document.getElementById('y').textContent = new Date().getFullYear();</script></footer>
+    <footer class="site-footer">
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;">
+        <p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p>
+        <div class="footer-links" aria-label="Mapa do site">
+          <a class="pill" href="../">Casos de Uso</a>
+          <a class="pill" href="../../pricing/">Preços</a>
+          <a class="pill" href="../../partners/">Parceiros</a>
+          <a class="pill" href="../../contact/">Contacto</a>
+        </div>
+        <div class="socials" aria-label="Redes sociais">
+          <a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
   </body>
-  </html>
+</html>
 
