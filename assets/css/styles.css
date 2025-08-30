@@ -102,6 +102,12 @@ p, .lead {
   grid-template-columns: 1fr;
   gap: 28px;
   align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+.hero-grid > div {
+  min-width: 0;
+  overflow: hidden;
 }
 .hero-kicker { 
   display: inline-block; 
@@ -116,6 +122,11 @@ p, .lead {
   font-size: 1.05rem; 
   line-height: 1.6;
   margin-bottom: 24px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .hero-card { display: flex; align-items: center; justify-content: center; }
 
@@ -345,7 +356,13 @@ input:focus, textarea:focus { outline: 2px solid rgba(13,148,136,.35); outline-o
 @media (max-width: 480px) {
   .btn { height: 36px; padding: 0 14px; font-size: 0.9rem; }
   .hero h1 { font-size: 1.8rem; line-height: 1.2; }
-  .hero .lead { font-size: 1rem; }
+  .hero .lead { 
+    font-size: 1rem; 
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
   .card { padding: 16px; }
   .container { padding: 0 12px; }
   .nav { height: auto; min-height: 64px; padding: 8px 0; }
@@ -355,6 +372,14 @@ input:focus, textarea:focus { outline: 2px solid rgba(13,148,136,.35); outline-o
 @media (max-width: 380px) {
   .btn { height: 36px; padding: 0 12px; font-size: 0.85rem; }
   .hero h1 { font-size: 1.6rem; }
+  .hero .lead { 
+    font-size: 0.95rem; 
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    margin-right: 4px;
+  }
   .card h3 { font-size: 1rem; }
   .container { padding: 0 8px; }
   .nav { flex-wrap: wrap; gap: 8px; }
