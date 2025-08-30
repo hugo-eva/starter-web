@@ -45,6 +45,21 @@
         </nav>
         <a class="btn btn-accent nav-cta" href="./contact/#demo">Peça uma Demo</a>
         <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false" style="margin-left:8px">Modo escuro</button>
+        <button class="btn btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>Menu</button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="container">
+          <nav aria-label="Principal">
+            <a href="./use-cases/">Casos de Uso</a>
+            <a href="./pricing/">Preços</a>
+            <a href="./partners/">Parceiros</a>
+            <a href="./contact/">Contacto</a>
+          </nav>
+          <div class="mobile-actions">
+            <a class="btn btn-accent" href="./contact/#demo">Peça uma Demo</a>
+            <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Modo escuro</button>
+          </div>
+        </div>
       </div>
     </header>
     <main id="content">
@@ -71,9 +86,10 @@
         <div class="container">
           <h2 class="section-title">Destaques</h2>
           <div class="grid cols-3">
-            <div class="card"><h3>Reatividade a eventos</h3><p class="muted">Geolocalização, beacons, movimentos e comandos de voz.</p></div>
-            <div class="card"><h3>Integração IFTTT</h3><p class="muted">Automatize fluxos com triggers e ações conectadas.</p></div>
+            <div class="card"><img alt="Reatividade a eventos" src="assets/img/feature-reactive.svg" width="56" height="56" loading="lazy" decoding="async" style="margin-bottom:8px;"><h3>Reatividade a eventos</h3><p class="muted">Geolocalização, beacons, movimentos e comandos de voz.</p></div>
+            <div class="card"><img alt="Integração IFTTT" src="assets/img/feature-ifttt.svg" width="56" height="56" loading="lazy" decoding="async" style="margin-bottom:8px;"><h3>Integração IFTTT</h3><p class="muted">Automatize fluxos com triggers e ações conectadas.</p></div>
             <div class="card">
+              <img alt="CMS Inteligente" src="assets/img/feature-cms.svg" width="56" height="56" loading="lazy" decoding="async" style="margin-bottom:8px;">
               <h3>CMS Inteligente</h3>
               <ul class="list-checks">
                 <li><span class="icon">✓</span> Flexible user management</li>

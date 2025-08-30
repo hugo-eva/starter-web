@@ -91,20 +91,52 @@
   document.addEventListener('DOMContentLoaded', function () {
     initPricing();
 
-    // Theme toggle handler
-    const toggle = document.querySelector('[data-theme-toggle]');
-    if (toggle) {
-      function updateLabel() {
+    // Theme toggle handler (supports multiple buttons)
+    const toggles = Array.from(document.querySelectorAll('[data-theme-toggle]'));
+    if (toggles.length) {
+      function updateLabels() {
         const isDark = document.documentElement.classList.contains('dark');
-        toggle.setAttribute('aria-pressed', String(isDark));
-        toggle.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+        toggles.forEach(t => {
+          t.setAttribute('aria-pressed', String(isDark));
+          t.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+        });
       }
-      toggle.addEventListener('click', function () {
+      toggles.forEach(t => t.addEventListener('click', function () {
         const isDark = document.documentElement.classList.toggle('dark');
         try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (_) {}
-        updateLabel();
+        updateLabels();
+      }));
+      updateLabels();
+    }
+
+    // Mobile nav toggle
+    const header = document.querySelector('.site-header');
+    const navToggle = document.querySelector('[data-nav-toggle]');
+    const mobileMenu = document.getElementById('mobile-menu');
+    function setMenuOpen(isOpen) {
+      if (!header || !navToggle || !mobileMenu) return;
+      header.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.hidden = !isOpen;
+    }
+    if (header && navToggle && mobileMenu) {
+      navToggle.addEventListener('click', function () {
+        const isOpen = !header.classList.contains('open');
+        setMenuOpen(isOpen);
       });
-      updateLabel();
+      mobileMenu.addEventListener('click', function (e) {
+        const link = e.target && e.target.closest && e.target.closest('a');
+        if (link) setMenuOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenuOpen(false);
+      });
+      const mq = window.matchMedia('(min-width: 860px)');
+      if (mq && mq.addEventListener) {
+        mq.addEventListener('change', (e) => { if (e.matches) setMenuOpen(false); });
+      }
+      // Ensure hidden on load
+      setMenuOpen(false);
     }
   });
 })();
