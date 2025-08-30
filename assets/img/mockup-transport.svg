@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" rx="8" fill="#0b1220"/>
+  <rect x="20" y="20" width="560" height="320" rx="4" fill="#14233b"/>
+  
+  <!-- Header -->
+  <rect x="40" y="40" width="520" height="40" rx="4" fill="#1e293b"/>
+  <text x="300" y="65" fill="#A6E3D0" font-family="Inter" font-size="18" text-anchor="middle">INFORMAÇÃO DE TRANSPORTES</text>
+  
+  <!-- Departure times -->
+  <rect x="40" y="100" width="520" height="30" rx="4" fill="#1e293b"/>
+  <text x="60" y="120" fill="#A6E3D0" font-family="Inter" font-size="14">Linha</text>
+  <text x="200" y="120" fill="#A6E3D0" font-family="Inter" font-size="14">Destino</text>
+  <text x="400" y="120" fill="#A6E3D0" font-family="Inter" font-size="14">Chegada</text>
+  <text x="500" y="120" fill="#A6E3D0" font-family="Inter" font-size="14">Estado</text>
+  
+  <!-- Schedule entries -->
+  <rect x="40" y="140" width="520" height="25" rx="2" fill="#334155"/>
+  <text x="60" y="157" fill="#cbd5e1" font-family="Inter" font-size="12">Metro A</text>
+  <text x="200" y="157" fill="#cbd5e1" font-family="Inter" font-size="12">Aeroporto</text>
+  <text x="400" y="157" fill="#86efac" font-family="Inter" font-size="12">2 min</text>
+  <text x="500" y="157" fill="#86efac" font-family="Inter" font-size="12">A Tempo</text>
+  
+  <rect x="40" y="175" width="520" height="25" rx="2" fill="#334155"/>
+  <text x="60" y="192" fill="#cbd5e1" font-family="Inter" font-size="12">Bus 44</text>
+  <text x="200" y="192" fill="#cbd5e1" font-family="Inter" font-size="12">Centro</text>
+  <text x="400" y="192" fill="#fbbf24" font-family="Inter" font-size="12">5 min</text>
+  <text x="500" y="192" fill="#fbbf24" font-family="Inter" font-size="12">Atraso</text>
+  
+  <rect x="40" y="210" width="520" height="25" rx="2" fill="#334155"/>
+  <text x="60" y="227" fill="#cbd5e1" font-family="Inter" font-size="12">Metro B</text>
+  <text x="200" y="227" fill="#cbd5e1" font-family="Inter" font-size="12">Universidade</text>
+  <text x="400" y="227" fill="#86efac" font-family="Inter" font-size="12">8 min</text>
+  <text x="500" y="227" fill="#86efac" font-family="Inter" font-size="12">A Tempo</text>
+  
+  <!-- Alert banner -->
+  <rect x="40" y="260" width="520" height="40" rx="4" fill="#dc2626"/>
+  <text x="300" y="285" fill="#ffffff" font-family="Inter" font-size="14" text-anchor="middle">ATENÇÃO: Obras na Linha C até 18:00</text>
+  
+  <!-- Live indicator -->
+  <circle cx="570" cy="50" r="4" fill="#86efac"/>
+  <text x="545" y="55" fill="#86efac" font-family="Inter" font-size="12">LIVE</text>
+</svg>
