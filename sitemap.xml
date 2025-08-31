@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Portuguese Pages -->
+  <!-- English Pages (Root) -->
   <url>
     <loc>https://lumy.tv/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/" />
   </url>
   <url>
     <loc>https://lumy.tv/use-cases/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/use-cases/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/use-cases/" />
   </url>
   <url><loc>https://lumy.tv/use-cases/retail/</loc></url>
   <url><loc>https://lumy.tv/use-cases/restaurants/</loc></url>
@@ -19,45 +19,45 @@
   <url><loc>https://lumy.tv/use-cases/events/</loc></url>
   <url>
     <loc>https://lumy.tv/pricing/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pricing/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/pricing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/pricing/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/pricing/" />
   </url>
   <url>
     <loc>https://lumy.tv/partners/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/partners/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/partners/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/partners/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/partners/" />
   </url>
   <url>
     <loc>https://lumy.tv/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/contact/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/contact/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/contact/" />
   </url>
   
-  <!-- English Pages -->
+  <!-- Portuguese Pages (/pt/) -->
   <url>
-    <loc>https://lumy.tv/en/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/" />
+    <loc>https://lumy.tv/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/" />
   </url>
   <url>
-    <loc>https://lumy.tv/en/use-cases/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/use-cases/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/use-cases/" />
+    <loc>https://lumy.tv/pt/use-cases/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/use-cases/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/use-cases/" />
   </url>
   <url>
-    <loc>https://lumy.tv/en/pricing/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pricing/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/pricing/" />
+    <loc>https://lumy.tv/pt/pricing/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/pricing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/pricing/" />
   </url>
   <url>
-    <loc>https://lumy.tv/en/partners/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/partners/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/partners/" />
+    <loc>https://lumy.tv/pt/partners/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/partners/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/partners/" />
   </url>
   <url>
-    <loc>https://lumy.tv/en/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/contact/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/en/contact/" />
+    <loc>https://lumy.tv/pt/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://lumy.tv/pt/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lumy.tv/contact/" />
   </url>
 </urlset>
 
