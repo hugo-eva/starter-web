@@ -1,0 +1,184 @@
+/**
+ * Amos Resource System Styles
+ * Estilos para o sistema de gerenciamento de recursos
+ */
+
+.amos-resource {
+    --resource-primary: #0b132b;
+    --resource-secondary: #1e293b;
+    --resource-accent: #3b82f6;
+    --resource-success: #10b981;
+    --resource-warning: #f59e0b;
+    --resource-error: #ef4444;
+    --resource-text: #1f2937;
+    --resource-text-light: #6b7280;
+    --resource-bg: #ffffff;
+    --resource-border: #e5e7eb;
+}
+
+.amos-resource.dark {
+    --resource-primary: #f8fafc;
+    --resource-secondary: #e2e8f0;
+    --resource-accent: #60a5fa;
+    --resource-success: #34d399;
+    --resource-warning: #fbbf24;
+    --resource-error: #f87171;
+    --resource-text: #f1f5f9;
+    --resource-text-light: #cbd5e1;
+    --resource-bg: #0f172a;
+    --resource-border: #334155;
+}
+
+.resource-panel {
+    background: var(--resource-bg);
+    border: 1px solid var(--resource-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.resource-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--resource-border);
+}
+
+.resource-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--resource-text);
+    margin: 0;
+}
+
+.resource-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.resource-status.active {
+    background: var(--resource-success);
+    color: white;
+}
+
+.resource-status.inactive {
+    background: var(--resource-error);
+    color: white;
+}
+
+.resource-status.pending {
+    background: var(--resource-warning);
+    color: white;
+}
+
+.resource-content {
+    color: var(--resource-text);
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--resource-border);
+}
+
+.resource-item:last-child {
+    border-bottom: none;
+}
+
+.resource-label {
+    font-weight: 500;
+    color: var(--resource-text);
+}
+
+.resource-value {
+    color: var(--resource-text-light);
+    font-family: monospace;
+}
+
+.resource-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.resource-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--resource-border);
+    border-radius: 6px;
+    background: var(--resource-bg);
+    color: var(--resource-text);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.resource-btn:hover {
+    background: var(--resource-secondary);
+    border-color: var(--resource-accent);
+}
+
+.resource-btn.primary {
+    background: var(--resource-accent);
+    color: white;
+    border-color: var(--resource-accent);
+}
+
+.resource-btn.primary:hover {
+    background: var(--resource-primary);
+}
+
+.resource-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.resource-stat {
+    background: var(--resource-bg);
+    border: 1px solid var(--resource-border);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--resource-accent);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--resource-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .resource-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-actions {
+        flex-direction: column;
+    }
+    
+    .resource-btn {
+        width: 100%;
+    }
+}

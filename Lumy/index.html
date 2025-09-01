@@ -32,6 +32,8 @@
     <meta name="twitter:site" content="@lumytv" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script defer src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="resources/amosbresource.css" />
+    <script src="resources/amosbresource.js"></script>
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Organization","name":"Lumy TV","url":"https://lumy.tv/","logo":"https://lumy.tv/assets/img/logo.svg","sameAs":["https://www.linkedin.com/company/lumytv","https://twitter.com/lumytv"]}
     </script>
@@ -285,6 +287,63 @@
           </div>
         </div>
       </section>
+
+      <!-- Amos Resource System Panel -->
+      <section class="amos-resource-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Sistema de Recursos Amos</h2>
+            <p class="section-subtitle">Gerenciamento inteligente de recursos do sistema</p>
+          </div>
+          
+          <div class="amos-resource">
+            <div class="resource-panel">
+              <div class="resource-header">
+                <h3 class="resource-title">Status do Sistema</h3>
+                <span class="resource-status active" id="system-status">Ativo</span>
+              </div>
+              <div class="resource-content">
+                <div class="resource-item">
+                  <span class="resource-label">Tema Atual:</span>
+                  <span class="resource-value" id="current-theme">light</span>
+                </div>
+                <div class="resource-item">
+                  <span class="resource-label">Idioma:</span>
+                  <span class="resource-value" id="current-language">en</span>
+                </div>
+                <div class="resource-item">
+                  <span class="resource-label">Recursos Ativos:</span>
+                  <span class="resource-value" id="active-features">4</span>
+                </div>
+                <div class="resource-item">
+                  <span class="resource-label">Versão:</span>
+                  <span class="resource-value">1.0.0</span>
+                </div>
+              </div>
+              <div class="resource-actions">
+                <button class="resource-btn" onclick="toggleTheme()">Alternar Tema</button>
+                <button class="resource-btn" onclick="refreshResources()">Atualizar</button>
+                <button class="resource-btn primary" onclick="showStats()">Estatísticas</button>
+              </div>
+            </div>
+
+            <div class="resource-stats" id="resource-stats" style="display: none;">
+              <div class="resource-stat">
+                <div class="stat-number" id="total-resources">0</div>
+                <div class="stat-label">Total de Recursos</div>
+              </div>
+              <div class="resource-stat">
+                <div class="stat-number" id="system-uptime">100%</div>
+                <div class="stat-label">Uptime</div>
+              </div>
+              <div class="resource-stat">
+                <div class="stat-number" id="resource-version">1.0</div>
+                <div class="stat-label">Versão</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;">
@@ -302,5 +361,63 @@
       </div>
       <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
     </footer>
+
+    <!-- Amos Resource System Scripts -->
+    <script>
+      // Funções para o painel de recursos
+      function toggleTheme() {
+        const currentTheme = amosResource.getResource('theme');
+        const newTheme = currentTheme.current === 'light' ? 'dark' : 'light';
+        amosResource.updateResource('theme', { current: newTheme });
+        
+        // Atualiza a interface
+        document.getElementById('current-theme').textContent = newTheme;
+        
+        // Aplica o tema ao documento
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+        
+        console.log('Tema alterado para:', newTheme);
+      }
+
+      function refreshResources() {
+        // Atualiza informações do painel
+        const theme = amosResource.getResource('theme');
+        const language = amosResource.getResource('language');
+        const features = amosResource.getResource('features');
+        
+        document.getElementById('current-theme').textContent = theme.current;
+        document.getElementById('current-language').textContent = language.current;
+        document.getElementById('active-features').textContent = Object.keys(features).length;
+        
+        console.log('Recursos atualizados');
+      }
+
+      function showStats() {
+        const stats = amosResource.getStats();
+        const statsPanel = document.getElementById('resource-stats');
+        
+        // Atualiza estatísticas
+        document.getElementById('total-resources').textContent = stats.totalResources;
+        document.getElementById('system-uptime').textContent = '100%';
+        document.getElementById('resource-version').textContent = '1.0';
+        
+        // Mostra/esconde o painel de estatísticas
+        if (statsPanel.style.display === 'none') {
+          statsPanel.style.display = 'grid';
+          console.log('Estatísticas do sistema:', stats);
+        } else {
+          statsPanel.style.display = 'none';
+        }
+      }
+
+      // Inicializa o painel quando a página carregar
+      document.addEventListener('DOMContentLoaded', function() {
+        // Aguarda o sistema Amos inicializar
+        setTimeout(() => {
+          refreshResources();
+          console.log('Painel de recursos Amos inicializado');
+        }, 100);
+      });
+    </script>
   </body>
 </html>
