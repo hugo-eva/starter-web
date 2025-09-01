@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Sistema Amos Resource</title>
+    <link rel="stylesheet" href="amosbresource.css">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .demo-section {
+            margin-bottom: 30px;
+        }
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .output {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Sistema Amos Resource</h1>
+            <p>Exemplo de implementação e uso do sistema de gerenciamento de recursos</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>1. Painel de Recursos</h2>
+            <div class="amos-resource">
+                <div class="resource-panel">
+                    <div class="resource-header">
+                        <h3 class="resource-title">Status do Sistema</h3>
+                        <span class="resource-status active" id="demo-status">Ativo</span>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-item">
+                            <span class="resource-label">Tema:</span>
+                            <span class="resource-value" id="demo-theme">light</span>
+                        </div>
+                        <div class="resource-item">
+                            <span class="resource-label">Idioma:</span>
+                            <span class="resource-value" id="demo-language">pt</span>
+                        </div>
+                        <div class="resource-item">
+                            <span class="resource-label">Recursos:</span>
+                            <span class="resource-value" id="demo-features">0</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="resource-btn" onclick="demoToggleTheme()">Alternar Tema</button>
+                        <button class="resource-btn" onclick="demoAddResource()">Adicionar Recurso</button>
+                        <button class="resource-btn primary" onclick="demoShowStats()">Ver Stats</button>
+                    </div>
+                </div>
+
+                <div class="resource-stats" id="demo-stats" style="display: none;">
+                    <div class="resource-stat">
+                        <div class="stat-number" id="demo-total">0</div>
+                        <div class="stat-label">Total</div>
+                    </div>
+                    <div class="resource-stat">
+                        <div class="stat-number" id="demo-version">1.0</div>
+                        <div class="stat-label">Versão</div>
+                    </div>
+                    <div class="resource-stat">
+                        <div class="stat-number" id="demo-status-text">Ativo</div>
+                        <div class="stat-label">Status</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>2. Console de Comandos</h2>
+            <div class="output" id="console-output">
+                Sistema Amos Resource carregado. Digite comandos no console do navegador.
+            </div>
+            
+            <div class="resource-actions">
+                <button class="resource-btn" onclick="demoConsole('amosResource.getStats()')">getStats()</button>
+                <button class="resource-btn" onclick="demoConsole('amosResource.listResources()')">listResources()</button>
+                <button class="resource-btn" onclick="demoConsole('amosResource.addResource(\'demo\', {test: true})')">addResource()</button>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>3. Código de Exemplo</h2>
+            <div class="code-block">
+// Inicializar o sistema
+amosResource.init();
+
+// Adicionar um recurso personalizado
+amosResource.addResource('userPreferences', {
+    notifications: true,
+    autoSave: true,
+    theme: 'dark'
+});
+
+// Obter um recurso
+const prefs = amosResource.getResource('userPreferences');
+
+// Atualizar um recurso
+amosResource.updateResource('userPreferences', {
+    theme: 'light',
+    notifications: false
+});
+
+// Listar todos os recursos
+const allResources = amosResource.listResources();
+
+// Verificar se um recurso existe
+if (amosResource.hasResource('userPreferences')) {
+    console.log('Recurso encontrado!');
+}
+
+// Obter estatísticas
+const stats = amosResource.getStats();
+console.log('Total de recursos:', stats.totalResources);
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>4. Funcionalidades Avançadas</h2>
+            <div class="amos-resource">
+                <div class="resource-panel">
+                    <div class="resource-header">
+                        <h3 class="resource-title">Recursos Personalizados</h3>
+                        <span class="resource-status pending">Em Desenvolvimento</span>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-item">
+                            <span class="resource-label">API Endpoints:</span>
+                            <span class="resource-value">3 ativos</span>
+                        </div>
+                        <div class="resource-item">
+                            <span class="resource-label">Cache:</span>
+                            <span class="resource-value">Habilitado</span>
+                        </div>
+                        <div class="resource-item">
+                            <span class="resource-label">Logs:</span>
+                            <span class="resource-value">Debug</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="resource-btn" onclick="demoAdvancedFeatures()">Testar Features</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="amosbresource.js"></script>
+    <script>
+        // Funções de demonstração
+        function demoToggleTheme() {
+            const currentTheme = amosResource.getResource('theme');
+            const newTheme = currentTheme.current === 'light' ? 'dark' : 'light';
+            amosResource.updateResource('theme', { current: newTheme });
+            
+            document.getElementById('demo-theme').textContent = newTheme;
+            document.body.style.background = newTheme === 'dark' ? '#0f172a' : '#f8fafc';
+            
+            logToConsole(`Tema alterado para: ${newTheme}`);
+        }
+
+        function demoAddResource() {
+            const resourceName = `demo_${Date.now()}`;
+            amosResource.addResource(resourceName, {
+                created: new Date().toISOString(),
+                type: 'demo',
+                active: true
+            });
+            
+            const features = amosResource.listResources().length;
+            document.getElementById('demo-features').textContent = features;
+            
+            logToConsole(`Recurso '${resourceName}' adicionado`);
+        }
+
+        function demoShowStats() {
+            const stats = amosResource.getStats();
+            const statsPanel = document.getElementById('demo-stats');
+            
+            document.getElementById('demo-total').textContent = stats.totalResources;
+            document.getElementById('demo-version').textContent = '1.0';
+            document.getElementById('demo-status-text').textContent = 'Ativo';
+            
+            if (statsPanel.style.display === 'none') {
+                statsPanel.style.display = 'grid';
+                logToConsole('Estatísticas exibidas');
+            } else {
+                statsPanel.style.display = 'none';
+                logToConsole('Estatísticas ocultadas');
+            }
+        }
+
+        function demoConsole(command) {
+            try {
+                const result = eval(command);
+                logToConsole(`> ${command}`);
+                logToConsole(`Resultado: ${JSON.stringify(result, null, 2)}`);
+            } catch (error) {
+                logToConsole(`Erro: ${error.message}`);
+            }
+        }
+
+        function demoAdvancedFeatures() {
+            // Simula funcionalidades avançadas
+            amosResource.addResource('advancedFeatures', {
+                apiEndpoints: ['/api/v1', '/api/v2', '/api/v3'],
+                cache: { enabled: true, ttl: 3600 },
+                logs: { level: 'debug', retention: '7d' }
+            });
+            
+            logToConsole('Funcionalidades avançadas testadas e configuradas');
+        }
+
+        function logToConsole(message) {
+            const output = document.getElementById('console-output');
+            const timestamp = new Date().toLocaleTimeString();
+            output.innerHTML += `<br>[${timestamp}] ${message}`;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const theme = amosResource.getResource('theme');
+                const language = amosResource.getResource('language');
+                const features = amosResource.listResources().length;
+                
+                document.getElementById('demo-theme').textContent = theme.current;
+                document.getElementById('demo-language').textContent = language.current;
+                document.getElementById('demo-features').textContent = features;
+                
+                logToConsole('Sistema Amos Resource inicializado com sucesso!');
+                logToConsole(`Recursos disponíveis: ${features}`);
+            }, 100);
+        });
+    </script>
+</body>
+</html>
