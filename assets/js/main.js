@@ -42,12 +42,15 @@
     lazyImages.forEach(img => { img.src = img.dataset.src; img.removeAttribute('data-src'); });
   }
 
-  function formatEUR(value) { 
-    const locale = window.i18n && window.i18n.currentLanguage === 'en' ? 'en-US' : 'pt-PT';
-    return new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).format(value); 
+  function formatUSD(value) { 
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value); 
   }
-  function calculatePrice({ screens, storageGb, annual }) {
-    const base = 9; const storagePerGb = 0.5; const monthly = screens * base + storageGb * storagePerGb;
+  function calculatePrice({ screens, plan, annual }) {
+    const prices = {
+      basic: 7.99,
+      pro: 10.99
+    };
+    const monthly = screens * (prices[plan] || prices.basic);
     return annual ? monthly * 12 * 0.8 : monthly;
   }
   function initPricing() {
@@ -59,12 +62,11 @@
 
     function updateCalc(el) {
       const screens = el.querySelector('[name="screens"]');
-      const storage = el.querySelector('[name="storage"]');
       const output = el.querySelector('[data-price-output]');
-      if (!screens || !storage || !output) return;
-      const price = calculatePrice({ screens: Number(screens.value), storageGb: Number(storage.value), annual });
-      const isEnglish = document.documentElement.lang === 'en';
-      output.textContent = annual ? formatEUR(price) + (isEnglish ? ' / year' : ' / ano') : formatEUR(price) + (isEnglish ? ' / month' : ' / mês');
+      const plan = el.dataset.plan || 'basic';
+      if (!screens || !output) return;
+      const price = calculatePrice({ screens: Number(screens.value), plan, annual });
+      output.textContent = annual ? formatUSD(price) + ' / year' : formatUSD(price) + ' / month';
     }
 
     function updateAll() { calcRoots.forEach(updateCalc); }
@@ -82,9 +84,7 @@
     // Inputs within calculators
     calcRoots.forEach(el => {
       const screens = el.querySelector('[name="screens"]');
-      const storage = el.querySelector('[name="storage"]');
       if (screens) screens.addEventListener('input', updateAll);
-      if (storage) storage.addEventListener('input', updateAll);
     });
 
     // Initialize default pressed state if present
