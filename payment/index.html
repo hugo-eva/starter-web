@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment – Lumy TV</title>
+    <meta name="description" content="Subscribe to Lumy TV's digital signage platform. Choose between Basic and Pro plans with monthly recurring billing." />
+    <link rel="canonical" href="https://lumy.tv/en/payment/" />
+    <meta name="theme-color" content="#0b132b" />
+    <link rel="manifest" href="../site.webmanifest" />
+    <link rel="mask-icon" href="../assets/img/logo.svg" color="#0b132b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/payment.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../"><span class="brand-badge"><img alt="Lumy TV" src="../assets/img/logo.svg" width="24" height="24"></span><span>Lumy TV</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="../use-cases/">Use Cases</a>
+          <a href="../pricing/">Pricing</a>
+          <a href="../partners/">Partners</a>
+          <a href="../contact/">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="language-switcher">
+            <a href="../pt/payment/" class="lang-link" title="Português">PT</a>
+            <span class="lang-separator">|</span>
+            <a href="../payment/" class="lang-link active" title="English">EN</a>
+          </div>
+          <a class="btn btn-outline nav-login" href="../contact/">Login</a>
+          <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+        </div>
+        <button class="btn btn-ghost nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-toggle-text">Menu</span>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="container">
+          <nav aria-label="Main">
+            <a href="../use-cases/">Use Cases</a>
+            <a href="../pricing/">Pricing</a>
+            <a href="../partners/">Partners</a>
+            <a href="../contact/">Contact</a>
+          </nav>
+          <div class="mobile-actions">
+            <a class="btn btn-outline" href="../contact/">Login</a>
+            <div class="mobile-meta">
+              <div class="language-switcher">
+                <a href="../pt/payment/" class="lang-link" title="Português">PT</a>
+                <span class="lang-separator">|</span>
+                <a href="../payment/" class="lang-link active" title="English">EN</a>
+              </div>
+              <button class="btn btn-ghost" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="content">
+      <section class="hero">
+        <div class="container">
+          <span class="hero-kicker">Payment</span>
+          <h1>Subscribe to Lumy TV</h1>
+          <p class="lead">Complete your subscription and start managing your digital signage today</p>
+        </div>
+      </section>
+      
+      <section class="payment-section">
+        <div class="container">
+          <div class="payment-container">
+            <!-- Plan Selection -->
+            <div class="payment-step active" id="plan-selection">
+              <h2>Choose Your Plan</h2>
+              <div class="plan-selector">
+                <div class="plan-option" data-plan="basic">
+                  <div class="plan-header">
+                    <h3>Basic</h3>
+                    <div class="plan-price">
+                      <span class="price-amount">$7.99</span>
+                      <span class="price-unit">per screen/month</span>
+                    </div>
+                  </div>
+                  <ul class="list-checks">
+                    <li><span class="icon">✓</span> Content management</li>
+                    <li><span class="icon">✓</span> Basic templates</li>
+                    <li><span class="icon">✓</span> Screen scheduling</li>
+                    <li><span class="icon">✓</span> Email support</li>
+                  </ul>
+                </div>
+                <div class="plan-option featured" data-plan="pro">
+                  <div class="plan-badge">Most Popular</div>
+                  <div class="plan-header">
+                    <h3>Pro</h3>
+                    <div class="plan-price">
+                      <span class="price-amount">$10.99</span>
+                      <span class="price-unit">per screen/month</span>
+                    </div>
+                  </div>
+                  <ul class="list-checks">
+                    <li><span class="icon">✓</span> Everything in Basic</li>
+                    <li><span class="icon">✓</span> Advanced analytics</li>
+                    <li><span class="icon">✓</span> Multi-user management</li>
+                    <li><span class="icon">✓</span> Custom branding</li>
+                    <li><span class="icon">✓</span> API access</li>
+                    <li><span class="icon">✓</span> Priority support</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Device Count Selector -->
+              <div class="device-selector">
+                <h3>How many screens do you need?</h3>
+                <div class="device-input-container">
+                  <label for="screen-count" class="sr-only">Number of screens</label>
+                  <input type="number" id="screen-count" name="screens" min="1" max="100" value="1" />
+                  <span class="device-label">screens</span>
+                </div>
+                <div class="price-summary">
+                  <div class="summary-line">
+                    <span>Plan: <span id="selected-plan-name">Basic</span></span>
+                    <span id="plan-price">$7.99/month per screen</span>
+                  </div>
+                  <div class="summary-line">
+                    <span>Screens: <span id="screen-count-display">1</span></span>
+                  </div>
+                  <div class="summary-line total">
+                    <span>Total Monthly Cost</span>
+                    <span id="total-price">$7.99</span>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="btn btn-accent btn-large" id="continue-to-payment">
+                Continue to Payment
+              </button>
+            </div>
+            
+            <!-- Payment Form -->
+            <div class="payment-step" id="payment-form">
+              <div class="payment-header">
+                <button class="btn btn-ghost back-btn" id="back-to-plans">← Back to Plans</button>
+                <h2>Payment Details</h2>
+              </div>
+              
+              <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                  <span id="order-plan-name">Basic Plan</span>
+                  <span id="order-plan-price">$7.99/month</span>
+                </div>
+                <div class="summary-item">
+                  <span id="order-screen-count">1 screen</span>
+                </div>
+                <div class="summary-item total">
+                  <span>Total</span>
+                  <span id="order-total">$7.99/month</span>
+                </div>
+              </div>
+              
+              <form id="payment-form-element">
+                <div class="form-section">
+                  <h4>Customer Information</h4>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="customer-name">Full Name</label>
+                      <input type="text" id="customer-name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="customer-email">Email Address</label>
+                      <input type="email" id="customer-email" name="email" required />
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-section">
+                  <h4>Payment Method</h4>
+                  <div id="card-element">
+                    <!-- Stripe Elements will create form elements here -->
+                  </div>
+                  <div id="card-errors" role="alert"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-accent btn-large" id="submit-payment">
+                  <span id="button-text">Subscribe Now</span>
+                  <div id="spinner" class="spinner hidden"></div>
+                </button>
+              </form>
+            </div>
+            
+            <!-- Success Message -->
+            <div class="payment-step" id="payment-success">
+              <div class="success-icon">✓</div>
+              <h2>Subscription Successful!</h2>
+              <p>Thank you for subscribing to Lumy TV. You'll receive a confirmation email shortly with your account details.</p>
+              <a href="../contact/" class="btn btn-primary">Access Dashboard</a>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="payment-step" id="payment-error">
+              <div class="error-icon">✗</div>
+              <h2>Payment Failed</h2>
+              <p id="error-message">There was an issue processing your payment. Please try again.</p>
+              <button class="btn btn-primary" id="retry-payment">Try Again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap: wrap;">
+        <p class="muted" style="margin:0">© <span id="y"></span> Lumy TV</p>
+        <div class="footer-links" aria-label="Site map">
+          <a class="pill" href="../use-cases/">Use Cases</a>
+          <a class="pill" href="../pricing/">Pricing</a>
+          <a class="pill" href="../partners/">Partners</a>
+          <a class="pill" href="../contact/">Contact</a>
+        </div>
+        <div class="socials" aria-label="Social media">
+          <a class="pill" href="https://www.linkedin.com/company/lumytv" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://twitter.com/lumytv" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </body>
+</html>
