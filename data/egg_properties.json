@@ -1,0 +1,50 @@
+{
+  "physical_properties": {
+    "egg_diameter": 0.055,
+    "shell_thickness": 0.0003,
+    "clara_fraction": 0.65,
+    "gema_fraction": 0.35,
+    "initial_temperature": 20.0,
+    "water_temperature": 100.0
+  },
+  "thermal_properties": {
+    "shell": {
+      "thermal_conductivity": 1.4,
+      "density": 2300.0,
+      "specific_heat": 800.0,
+      "thermal_diffusivity": 7.6e-7
+    },
+    "clara": {
+      "thermal_conductivity": 0.54,
+      "density": 1030.0,
+      "specific_heat": 3800.0,
+      "thermal_diffusivity": 1.38e-7
+    },
+    "gema": {
+      "thermal_conductivity": 0.35,
+      "density": 1025.0,
+      "specific_heat": 2850.0,
+      "thermal_diffusivity": 1.2e-7
+    },
+    "water": {
+      "thermal_conductivity": 0.68,
+      "density": 958.0,
+      "specific_heat": 4220.0,
+      "kinematic_viscosity": 2.95e-7,
+      "prandtl_number": 1.83,
+      "thermal_expansion": 6.95e-4
+    }
+  },
+  "cooking_criteria": {
+    "clara_coagulation_temp": 62.0,
+    "gema_coagulation_temp": 65.0,
+    "soft_boiled_time": 180.0,
+    "medium_boiled_time": 360.0,
+    "hard_boiled_time": 600.0
+  },
+  "convection_parameters": {
+    "natural_convection_h": 250.0,
+    "forced_convection_h_min": 500.0,
+    "forced_convection_h_max": 2000.0
+  }
+}
